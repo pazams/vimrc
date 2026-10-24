@@ -17,14 +17,14 @@ Plug 'tpope/vim-repeat', { 'tag': 'v1.1'}
 Plug 'airblade/vim-rooter', { 'commit': '70c105c'}
 Plug 'tpope/vim-surround', { 'tag': 'v2.1'}
 Plug 'amix/vim-zenroom2', { 'commit': '948734e'}
-Plug 'gabrielelana/vim-markdown'
+Plug 'MeanderingProgrammer/render-markdown.nvim', { 'tag': 'v8.14.0' } | Plug 'nvim-tree/nvim-web-devicons', { 'tag': 'v0.100' }
 Plug 'ervandew/supertab', { 'commit': 'cdaa5c2' }
 Plug 'editorconfig/editorconfig-vim', { 'commit': '0abb063' }
 
 " languages plugins
 Plug 'neovim/nvim-lspconfig', { 'tag': 'v0.1.0'}
 Plug 'hrsh7th/cmp-nvim-lsp', { 'commit': 'ebdfc20'}
-Plug 'hrsh7th/nvim-cmp', { 'commit': '7cb14b0'}
+Plug 'hrsh7th/nvim-cmp', { 'tag': 'v0.0.2'}
 
 " Plug 'moll/vim-node', { 'tag': 'v0.8.1'}
 " Plug 'pangloss/vim-javascript', { 'tag': 'v1.1.3'}
@@ -49,5 +49,7 @@ Plug 'chriskempson/vim-tomorrow-theme', { 'commit': 'f45a2ca' }
 
 " https://editorconfig.org/
 Plug 'editorconfig/editorconfig-vim', { 'commit': '0a3c1d8' }
+
+Plug 'glacambre/firenvim', { 'commit': '31befdf', 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()

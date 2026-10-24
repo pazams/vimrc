@@ -1,10 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" use tommorow Colorscheme 
+" use tommorow Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("gui_running")
-   colorscheme Tomorrow
+   colorscheme Tomorrow-Night-Eighties
 else
-   set background=light
-   colorscheme Tomorrow
+   " set background=light
+   colorscheme Tomorrow-Night-Eighties
 endif

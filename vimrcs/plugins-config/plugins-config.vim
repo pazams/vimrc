@@ -212,3 +212,18 @@ for _, lsp in ipairs(servers) do
   }
 end
 EOF
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => render-markdown.nvim (in-buffer markdown rendering)
+" https://github.com/MeanderingProgrammer/render-markdown.nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua <<EOF
+  require('render-markdown').setup({
+    -- no external latex converter, no extra parsers needed
+    html = { enabled = false },
+    latex = { enabled = false },
+    yaml = { enabled = false },
+  })
+EOF
+nnoremap <silent> <leader>mr :RenderMarkdown toggle<cr>
