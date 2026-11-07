@@ -18,6 +18,7 @@ Plug 'airblade/vim-rooter', { 'commit': '70c105c'}
 Plug 'tpope/vim-surround', { 'tag': 'v2.1'}
 Plug 'amix/vim-zenroom2', { 'commit': '948734e'}
 Plug 'MeanderingProgrammer/render-markdown.nvim', { 'tag': 'v8.14.0' } | Plug 'nvim-tree/nvim-web-devicons', { 'tag': 'v0.100' }
+Plug 'iurysza/nice-mermaid.nvim', { 'tag': 'v0.1.0', 'do': 'npm ci --prefix bridge --omit=dev' }
 Plug 'ervandew/supertab', { 'commit': 'cdaa5c2' }
 Plug 'editorconfig/editorconfig-vim', { 'commit': '0abb063' }
 

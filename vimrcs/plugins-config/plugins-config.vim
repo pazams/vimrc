@@ -224,6 +224,32 @@ lua <<EOF
     html = { enabled = false },
     latex = { enabled = false },
     yaml = { enabled = false },
+    -- also style nice-mermaid's read-only preview buffer
+    file_types = { 'markdown', 'mermaid-preview' },
+    overrides = {
+      filetype = {
+        ['mermaid-preview'] = {
+          anti_conceal = { enabled = false },
+          win_options = { concealcursor = { default = 'nvic', rendered = 'nvic' } },
+        },
+      },
+    },
   })
 EOF
 nnoremap <silent> <leader>mr :RenderMarkdown toggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => nice-mermaid.nvim (mermaid blocks -> unicode diagrams)
+" https://github.com/iurysza/nice-mermaid.nvim
+" Only mermaid block bodies are sent to the local node bridge.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua <<EOF
+  local ok, nice_mermaid = pcall(require, 'nice_mermaid')
+  if ok then
+    nice_mermaid.setup({
+      auto_render = false,   -- preview only on demand; keep normal editing untouched
+    })
+  end
+EOF
+nnoremap <silent> <leader>mm :Mermaid toggle<cr>
